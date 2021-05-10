@@ -7,6 +7,7 @@
 // Run with gdb: gdb ./prog --tui
 /////////////////////////////////////////////////
 
+// @file hello.cpp
 // Bring in a header file on our include path
 // this happens to be in the standard library
 // (i.e. default compiler path)
