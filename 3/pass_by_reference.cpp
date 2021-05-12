@@ -13,7 +13,7 @@
 // (i.e. default compiler path)
 #include <iostream>
 
-void func(int &x){
+void func(int& x){
     // The copy of x is what we're really modifying
     // Look the address is different!
     std::cout << "referencing x at same address:  " << &x << std::endl;
