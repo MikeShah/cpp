@@ -33,7 +33,5 @@ int main(int argc, char* argv[]){
     // Report on the size
     std::cout << "size:" << myStack.size() << std::endl;
 
-
-
     return 0;
 }
