@@ -1,0 +1,7 @@
+Hello,
+
+This is a text file
+that we are going
+to read one line
+at a time. Thank
+you for reading!
