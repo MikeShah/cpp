@@ -27,6 +27,10 @@ int main(int argc, char* argv[]){
     // Alternatively we have 'back()' as a member function to do this
     std::cout << "First character still is: " << name.back() << std::endl;
 
+    int index = name.find("Shah");
+    std::cout << "Shah is at: " << index << std::endl;
+
+
     return 0;
 }
 
