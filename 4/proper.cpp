@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////
-// Compile with: g++ -std=c++17 sscanf.cpp -o prog
+// Compile with: g++ -std=c++17 proper.cpp -o prog
 // Run with    : ./prog
 //
 // Compile for debugging with:
@@ -7,11 +7,11 @@
 // Run with gdb: gdb ./prog --tui
 /////////////////////////////////////////////////
 
-// @file scanf.cpp
+// @file proper.cpp
 #include <iostream> // I/O stream library
 #include <string>   // std::string object
 
-// Entry point to program 'main' sscanf
+// Entry point to program 'main' proper
 int main(int argc, char* argv[]){
 
     std::string formatted_data = "11 13 15\n5 7 8";
