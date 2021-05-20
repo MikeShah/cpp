@@ -1,9 +1,9 @@
 /////////////////////////////////////////////////
-// Compile with: g++ -std=c++17 objectsFromScratch.cpp -o prog
+// Compile with: g++ -std=c++17 objectFromScratch.cpp -o prog
 // Run with    : ./prog
 //
 // Compile for debugging with:
-// g++ -std=c++17 -g objectsFromScratch.cpp -o prog
+// g++ -std=c++17 -g objectFromScratch.cpp -o prog
 // Run with gdb: gdb ./prog --tui
 /////////////////////////////////////////////////
 
@@ -32,12 +32,16 @@ void print(struct Student* s){
 
 // Entry point to program 'main' objectsFromScratch.cpp
 int main(int argc, char* argv[]){
-  
+
+    std::cout << (void*)&print << std::endl;
+
     Student mike;
     mike.age = 87;
     // Here we are painfully, setting up, every
     // function pointer to loose functions in our program.
+    // (Here we are doing the pointer assignment)
     mike.printFunc = &print;
+    // This is actually making the function call.
     mike.printFunc(&mike);
 
     return 0;
