@@ -20,6 +20,8 @@ int main(){
     // Reverse our collection
     std::reverse(myVector.begin(),myVector.end());
     // Iterate through and print the elements
+    // Using a 'for-each' style loop, to just iterate
+    // through all of our elements.
     for(auto& e : myVector){
         std::cout << e << std::endl;
     }

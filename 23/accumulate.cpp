@@ -12,12 +12,12 @@
 #include <vector>
 #include <algorithm>
 #include <iterator>
-#include <numeric>
+#include <numeric> // New library for mathematical algorithms
 
 // Entry point to program 'main' accumulate.cpp
 int main(){
-    std::vector<int> myVector{1,1,1,1,5,1,6,7,8};
 
+    std::vector<int> myVector{1,1,1,1,5,1,6,7,8};
 
     // Where to start, end, and the initial sum (which is 0)
     int sum = std::accumulate(myVector.begin(),myVector.end(),0);

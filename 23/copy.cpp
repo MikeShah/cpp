@@ -19,7 +19,7 @@ int main(){
     std::vector<int> myVector2;
 
     // Copy elements 1 at a time
-    /*
+    /* 
     std::copy(myVector.begin(),
                  myVector.end(),
                  std::back_inserter(myVector2));

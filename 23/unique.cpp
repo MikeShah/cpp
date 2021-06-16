@@ -17,6 +17,8 @@
 int main(){
 
     std::vector<int> myVector{1,1,1,1,5,1,6,7,8};
+    // We can also sort easily!
+    std::sort(myVector.begin(),myVector.end());
     // Just retrieve the (adjacent) unique elements in our vector.
     auto uniq = std::unique(myVector.begin(), myVector.end()); 
     // Now, we need to erase, the 'extra' space
@@ -24,8 +26,7 @@ int main(){
     // iterator, and points us to the last element in our new unique
     // collection.
     myVector.erase(uniq,myVector.end());
-    // We can also sort easily!
-    std::sort(myVector.begin(),myVector.end());
+
     
     // Iterate through and print the elements
     for(auto& e : myVector){

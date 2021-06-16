@@ -27,10 +27,15 @@ int main(){
     for(std::vector<int32_t>::iterator it = myVector.begin();
             it != myVector.end();
             ++it){
-
         std::cout << *it << std::endl;
     }
-
+    // 'auto' is acceptable in this case, because it saves us
+    // some typing, generally I prefer not to use auto.
+    for(auto it = myVector.begin();
+            it != myVector.end();
+            ++it){
+        std::cout << *it << std::endl;
+    }
 
     return 0;
 }
