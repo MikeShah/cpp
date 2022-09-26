@@ -1,8 +1,10 @@
-// @file decay2.cpp
+// @file decay_brackets_warning.cpp
 // g++ -g -std=c++17 decay2.cpp -o prog
 #include <iostream>
 
-void arrayDecay(short* arr){
+// This will give a warning if you pass in a pointer
+// type that the converson is taking place
+void arrayDecay(short arr[]){
     std::cout << "sizeof(arr)  : " 
 			  << sizeof(arr) 
 			  << std::endl;

@@ -16,7 +16,6 @@ void func(int* pointer_param){
     // However, the address that x points to is copied
     // so that means we can still derference it.
     *pointer_param = 9999;
-
 }
 
 
@@ -24,7 +23,9 @@ void func(int* pointer_param){
 int main(int argc, char* argv[]){
    
     int x = 5;
-    std::cout << "x address in main is    : " << &x << std::endl;
+    std::cout << "x address in main is    : " 
+			  << &x 
+			  << std::endl;
     // Pass in the address of 'x' because
     // the input parameter is a pointer.
     func(&x);

@@ -1,8 +1,4 @@
-/////////////////////////////////////////////////
-// Compile with: g++ -std=c++17 arithmetic.cpp -o prog
-// Run with    : ./prog
-//
-// Compile for debugging with:
+
 // g++ -std=c++17 -g arithmetic.cpp -o prog
 // Run with gdb: gdb ./prog --tui
 /////////////////////////////////////////////////
@@ -21,10 +17,14 @@ int main(int argc, char* argv[]){
     arr[2] = 24;
 
     // We can index into the array as follows
-    std::cout << arr[0] << "," << arr[1] << "," << arr[2] << std::endl;
+    std::cout << arr[0] << "," 
+			  << arr[1] << "," 
+			  << arr[2] << std::endl;
 
     // Or, we can step to the next element using pointer arithmetic
-    std::cout << *(arr+0) << "," << *(arr+1) << "," << *(arr+2) << std::endl;
+    std::cout << *(arr+0) << "," 
+			  << *(arr+1) << "," 
+			  << *(arr+2) << std::endl;
 
     // delete the dynamically allocated array
     delete[] arr;

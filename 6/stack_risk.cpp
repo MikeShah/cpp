@@ -12,9 +12,11 @@
 #include <cstdlib>
 #include <ctime>
 
+// Global variable (For demonstration purposes)
 int* g_pointer = nullptr;
 
 void important(){
+	// Stack allocated variable
     int x = rand() % 10 + 1;
     std::cout << "x is: " << x << std::endl;
     // point our pointer to the address
@@ -38,7 +40,10 @@ int main(int argc, char* argv[]){
         function();
     }
     // What will the value be?
-    std::cout << "g_pointer: " << *g_pointer << std::endl;
+	// *Hint* I NEVER assign g_pointer to 9999, but
+	//        think about stack memory.
+    std::cout << "g_pointer: " 
+			  << *g_pointer << std::endl;
     
     return 0;
 }
