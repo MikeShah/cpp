@@ -1,5 +1,3 @@
-
-
 // g++ -std=c++17 -g textwriter.cpp -o prog
 // @file textwriter.cpp
 #include <iostream>
@@ -15,11 +13,15 @@ int main(){
 
     std::cout << "Type: 'quit' to exit " << std::endl;
     // Main loop, that reads in lines
-    while(line!="quit"){
+    while(1){
         std::cout << ": ";
         //std::cin >> line;
         std::getline(std::cin,line);
-        lines.push_back(line+'\n');
+		if(line!="quit"){
+        	lines.push_back(line+'\n');
+		}else{
+			break; // terminate the current loop
+		}
     }
 
     std::ofstream myFile("textWriterOutput.txt");
@@ -33,3 +35,5 @@ int main(){
 
     return 0;
 }
+
+
