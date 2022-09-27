@@ -22,6 +22,12 @@ sf::Vector2i Particle::GetPosition(){
 void Particle::SetPosition(int x, int y){
     m_position.x = x;
     m_position.y = y;
+    // TODO: If your particles are falling through the world,
+    //       then you can try to set some 'boundary' for them.
+    //       This is an 'okay' way to do it.
+    if(m_position.y >= 400){
+        m_position.y = 399;
+    }
 }
 
 void Particle::Draw(sf::RenderWindow* windowRef){
