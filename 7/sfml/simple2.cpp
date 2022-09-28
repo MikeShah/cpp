@@ -1,9 +1,9 @@
 // @file sfml/simple2.cpp
 /* Linux:
-  g++ simple2.cpp -o prog -lsfml-graphics -lsfml-window -lsfml-system
+  g++ -g simple2.cpp -o prog -lsfml-graphics -lsfml-window -lsfml-system
   
    Mac M1:
-    g++ simple2.cpp -I/opt/homebrew/Cellar/sfml/2.5.1_2/include -L/opt/homebrew/Cellar/sfml/2.5.1_2/lib -o prog -lsfml-graphics -lsfml-window -lsfml-system    
+    g++ -g simple2.cpp -I/opt/homebrew/Cellar/sfml/2.5.1_2/include -L/opt/homebrew/Cellar/sfml/2.5.1_2/lib -o prog -lsfml-graphics -lsfml-window -lsfml-system    
 */ 
 
 #include <SFML/Graphics.hpp>
