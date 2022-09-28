@@ -14,7 +14,7 @@
 // Entry point to program 'main'
 int main(int argc, char* argv[]){
 
-    // Initialize our array
+    // Initialize our dynamic array i.e. std::vector
     std::vector <char> myVector = {'m','i','k','e','\0'};
 
     // Add some more characters
