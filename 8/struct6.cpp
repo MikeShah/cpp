@@ -1,0 +1,65 @@
+/////////////////////////////////////////////////
+// Compile with: g++ -std=c++20 struct6.cpp -o prog
+// Run with    : ./prog
+//
+// Compile for debugging with:
+// g++ -std=c++20 -g struct6.cpp -o prog
+// Run with gdb: gdb ./prog --tui
+/////////////////////////////////////////////////
+
+// @file struct6.cpp
+#include <iostream> // I/O stream library
+
+struct Point2D{
+    public: // By default access level is public in
+            // a 'struct' in C++
+    float x;
+    float y;
+
+    // Publically available Member Function
+    void Print(){
+        std::cout << this 
+                  << " Point2D(" 
+                  << x << "," << y << ")"
+                  << std::endl;
+    }
+
+    // Note: We can use 'this' in front of
+    //       a member variable to make
+    //       our use of the same named
+    //       variables less ambiguous
+    void SetXY(float x, float y){
+        // this.x is the 'internal member variable'
+        // 'x' is the argument passed into the member
+        // function
+        this->x = x;
+        this->y = y;
+    }
+};
+
+// @file struct6.cpp
+int main(){
+
+    // An dynamically allocated
+    // instance named 'origin' of type 'Point2D'
+    Point2D* origin = new Point2D;
+    origin->SetXY(0.0f,0.0f);
+
+    Point2D* secondPoint = new Point2D;
+    // Observe this time, I am not using the '->'
+    // shorthand, but instead dereferencing
+    // and then accessing the member field.
+    // ***** -> and (*). are thus equivalent! *****
+    (*secondPoint).SetXY(5.0f,72.0f);
+
+    // Usage of our 'struct'
+    origin->Print();
+    (*secondPoint).Print();
+
+    // Clean up our memory
+    delete origin;
+    delete secondPoint;
+
+    return 0;
+}
+
