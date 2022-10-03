@@ -27,7 +27,7 @@ int main(int argc, char* argv[]){
     char myCopy[10];
 
     // Copy elements 1 at a time
-    for(int i=0; i < 10; i++){
+    for(int i=0; i < 5; i++){
         myCopy[i] = myArray[i];
     }
 
