@@ -7,7 +7,7 @@ int main(){
     // Main render window
     sf::RenderWindow renderWindow(sf::VideoMode(400,400),"Game Loop Structure");
     // Setup Objects
-    sf::CircleShape shape(5.0f);
+    sf::CircleShape shape(25.0f);
 
     // Main Application Loop
     while(renderWindow.isOpen()){

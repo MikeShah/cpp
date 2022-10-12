@@ -33,6 +33,7 @@ int main(){
         // Handle Inputs
         if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
             sf::Vector2i mouse = sf::Mouse::getPosition(renderWindow);
+			// Bounds checking so we don't draw outside the window.
             if(mouse.x > -1 && mouse.x < 400 && 
                mouse.y > -1 && mouse.y < 400){
                 myImage.setPixel(mouse.x,mouse.y,sf::Color(255,255,255));

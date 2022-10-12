@@ -3,7 +3,7 @@
 // Run with    : ./prog
 //
 // Compile for debugging with:
-// g++ -std=c++20 -g main.cpp Point2D -o prog
+// g++ -std=c++20 -g main.cpp Point2D.cpp -o prog
 // Run with gdb: gdb ./prog --tui
 /////////////////////////////////////////////////
 
