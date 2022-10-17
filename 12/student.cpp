@@ -28,6 +28,30 @@ int main(int argc, char* argv[]){
                 //       the scenes, we did not create it.
     s1.print(); // Print whatever default constructor assigns age to
 
+	// Another instance of a student
+	Student s2;
+			s2.age = 57;
+			s2.print();
+
+	// Another instance of a student, this time heap allocated
+	Student* s3 = new Student;
+			 s3->age = 42;
+			 s3->print();
+
+			 delete s3;
+
+
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
 

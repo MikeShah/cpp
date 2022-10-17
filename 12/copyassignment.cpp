@@ -37,7 +37,7 @@ int main(){
     T object2 = object1;
     T object3;
 
-    // Copy Assignment here
+    // Copy Assignment here -- both objects exist already!
     object3 = object1; // a.k.a: object1=(object3);
 
     object1.printData();

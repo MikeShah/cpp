@@ -15,7 +15,7 @@ struct Student{
     int age;
 };
 
-struct Student2{
+struct Animal{
     int age;
 };
 
@@ -26,10 +26,9 @@ int main(int argc, char* argv[]){
     Student s1; // Create an instance of an object
                 // The type of this instance is 'Student'
     std::cout << "what type is s1?: " << typeid(s1).name() << std::endl;
-    Student2 s2; // Create an instance of an object
-                // The type of this instance is 'Student2'
-    std::cout << "what type is s2?: " << typeid(s2).name() << std::endl;
-
+    Animal a1; // Create an instance of an object
+                // The type of this instance is 'Animal'
+    std::cout << "what type is a1?: " << typeid(a1).name() << std::endl;
 
     return 0;
 }

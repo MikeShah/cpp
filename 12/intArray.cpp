@@ -15,7 +15,7 @@ struct IntArray{
 // member functions are pbulic
 public:	
     int* m_storage; // Sometimes I prefix member variables
-    int m_size;     // with 'm_' to indicate they are member variables
+    int  m_size;     // with 'm_' to indicate they are member variables
     
     // Our constructor
     IntArray(int _size){
