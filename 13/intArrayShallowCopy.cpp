@@ -47,17 +47,35 @@ public:
     int GetSize() const{
         return m_size;
     }
+
 };
 
 
 // Entry point to program 'main' intArrayShallowCopy.cpp
 int main(){
-	IntArray a(20);
-    IntArray b=a; // Invoke the 'compiler copy constructor
+	{
+			IntArray a(20);
+			IntArray b=a; // Invoke the 'compiler copy constructor
 
 
-    std::cout << "m_size = " << a.GetSize(); // Access value for read only
-    a.Print();
-    
+			std::cout << "m_size = " << a.GetSize() << std::endl; // Access value for read only
+			a.Print();
+	}
+	std::cout << "Did I reach here?\n";
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

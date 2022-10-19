@@ -36,6 +36,8 @@ public:
 
     // @file intArrayDeepCopy.cpp
     // Copy constructor
+	// IntArray a(20);
+	// IntArray b = a; // copy constructor called.
     IntArray(const IntArray& copy){
         this->m_size = copy.m_size;
         this->m_storage = new int[m_size];
@@ -45,7 +47,13 @@ public:
     }
 
     // copy assignment operator
+	// e.g.
+	// 	IntArray a(20);
+	// 	IntArray b(17);
+	// 	b = a; // b now allocated with a's 20 elements.
+	//
     IntArray& operator=(const IntArray& rhs){
+		// Make sure we're not copying ourselves
         if(&rhs == this){
             return *this;
         }
@@ -59,6 +67,7 @@ public:
         this->m_size = rhs.m_size;
         this->m_storage = new int[m_size];
         for(int i=0; i < m_size;i++){
+			// equivalently this->m_storage[i] = rhs.m_storage[i];
             m_storage[i] = rhs.m_storage[i];
         }
         return *this;
