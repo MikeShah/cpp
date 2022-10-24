@@ -22,19 +22,17 @@ class Shape{
         std::cout << "Shape::area()" << std::endl;
         return width*height;
     }
-
 };
 
 class Rectangle: public Shape{
-
-
-    int area(){
+	// 'override' is not required, but will
+	// signal to the compiler that you are indeed looking
+	// for a function in a parent class to override.
+    int area() override{
         std::cout << "Rectangle::area" << std::endl;
         return width*height;
     }
-
 };
-
 
 // Entry point to program 'main' virtual.cpp
 int main(){
