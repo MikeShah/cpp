@@ -1,4 +1,4 @@
-#include "BinaryTree.hpp"
+#nclude "BinaryTree.hpp"
 
 // C++ Standard Library files
 #include <iostream>
@@ -112,8 +112,10 @@ void BinaryTree::Print(BinaryNode* node){
     if(node->left !=nullptr){
         Print(node->left);
     }
+
     // Then print
     std::cout << node->value << ",";
+
     // Then traverse right
     if(node->right !=nullptr){
         Print(node->right);
