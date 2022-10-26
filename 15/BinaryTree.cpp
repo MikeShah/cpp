@@ -1,4 +1,4 @@
-#nclude "BinaryTree.hpp"
+#include "BinaryTree.hpp"
 
 // C++ Standard Library files
 #include <iostream>
@@ -62,6 +62,7 @@ void BinaryTree::Insert(int value, BinaryNode* node){
     }
 
 }
+
 
 void BinaryTree::Insert(int value){
     // (1) If our tree is empty
