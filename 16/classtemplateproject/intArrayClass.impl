@@ -1,0 +1,74 @@
+#include "intArrayClass.hpp"
+#include <iostream>
+
+namespace mike{
+// Our constructor
+template<class T>
+Array<T>::Array(int _size){
+	std::cout << "Calling constructor" << std::endl;
+	m_storage = new T[_size]; 
+	for(int i =0; i < _size; i++){
+		m_storage[i] = i;
+	}
+	m_size = _size;		// save size;
+}
+
+// Our destructor
+// Called automatically when our object goes out of scope
+template<class T>
+Array<T>::~Array()
+{
+	std::cout << "Calling destructor" << std::endl;
+	delete[] m_storage;
+}
+
+// Copy constructor
+template<class T>
+Array<T>::Array(const Array& copy){
+	this->m_size = copy.m_size;
+	this->m_storage = new T[m_size];
+	for(int i=0;i<m_size;i++){
+		m_storage[i] = copy.m_storage[i];
+	}
+}
+
+// copy assignment operator
+template<class T>
+Array<T>& Array<T>::operator=(const Array& rhs){
+	if(&rhs == this){
+		return *this;
+	}
+	// If we previously had elements, before we
+	// do the re-assignment, we want to delete our old
+	// memory, otherwise, we'll leak memory!
+	if(m_storage!=nullptr){
+		delete[] m_storage;
+	}
+
+	this->m_size = rhs.m_size;
+	this->m_storage = new T[m_size];
+	for(int i=0; i < m_size;i++){
+		m_storage[i] = rhs.m_storage[i];
+	}
+
+	return *this;
+}
+
+// print member function
+template<class T>
+void Array<T>::Print(){
+	for(int i =0; i < m_size; i++){
+		std::cout << m_storage[i] << "\n";
+	}
+}
+
+// The 'const' at the end of the member function ensures
+// that none of the member variables will be changed
+// This this function is read-only
+template<class T>
+int Array<T>::GetSize() const{
+	return m_size;
+}
+
+
+}// End namespace mike
