@@ -65,7 +65,7 @@ int main(int argc, char* argv[]){
         float currentTime = clock.restart().asSeconds();
         float fps = 1.0f / (currentTime);        
 
-        window.setTitle("Collision Test at "+std::to_string(static_cast<int>(fps))+" FPS");
+        window.setTitle("Collision Test at\t"+std::to_string(static_cast<int>(fps))+" FPS");
         sf::Event event;
         while (window.pollEvent(event)){
             if (event.type == sf::Event::Closed){
