@@ -47,7 +47,7 @@ struct ColliderShape2D{
         return m_isColliding;
     }
 
-    void Move(){
+    void Update(){
         m_x += m_xDirection * m_speed;
         m_y += m_yDirection * m_speed;
 
