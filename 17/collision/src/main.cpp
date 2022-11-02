@@ -20,6 +20,7 @@
 
 #include "ColliderShape2D.hpp"
 
+// @file collision/src/main.cpp
 // Group related data into a struct
 struct ArgumentSettings{
     // Populate the program arguments
@@ -31,7 +32,7 @@ int main(int argc, char* argv[]){
 
     // Ensure the programmer provided enough arguments.
     if(argc < 3){
-        std::cout << "Error run program with:\n"
+        std::cout << "Error running program " << argv[0] << ":\n"
                   << "e.g. ./prog 1 100\n"
                   << "e.g. ./prog 0 400\n"
                   << "First argument is collision(1=on, 0=off)"
