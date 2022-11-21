@@ -1,7 +1,12 @@
+// g++ -std=c++11 main.cpp -o prog
+// Note: This example needs at least C++ 11 because of unordered_map
 #include <iostream>
 #include <unordered_map>
 #include <vector>
 
+typedef std::unordered_map<int,std::vector<int> > adjList_t;
+
+// @file adjacency_list_unordered_map/main.cpp
 void AddEdge(std::unordered_map<int,std::vector<int> >& graph,
             int src,
             int dst){
@@ -11,7 +16,8 @@ void AddEdge(std::unordered_map<int,std::vector<int> >& graph,
 
 void PrintAdjaceneyList(const std::unordered_map<int,std::vector<int> >& adj){
     for(const auto key: adj){
-        // Note: An unordered_map is a key/value pair, so when we iterate we get key/value pairs
+        // Note: An unordered_map is a key/value pair, so when we 
+		//       iterate we get key/value pairs.
         //       Thus, we have to access the first element as the 'key'
         std::cout << key.first << "-->";
         for(auto value: key.second){
@@ -21,9 +27,10 @@ void PrintAdjaceneyList(const std::unordered_map<int,std::vector<int> >& adj){
     }
 }
 
+// @file adjacency_list_unordered_map/main.cpp
 int main(){
-                        // key // value
-    std::unordered_map<int,    std::vector<int> > adj;
+
+	adjList_t adj;
 
     AddEdge(adj,1,2);
     AddEdge(adj,1,3);
